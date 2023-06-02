@@ -1,17 +1,5 @@
-@font-face {
-    font-family: "Zen";
-    font-weight: lighter;
-    src: url("ZenLight.ttf");
-}
-
-@font-face {
-    font-family: "Zen";
-    font-weight: bold;
-    src: url("ZenBold.ttf");
-}
-
 body {
-    font-family: "Zen";
+    font-family: 'Zen Maru Gothic', sans-serif;
     font-weight: bold;
     background-color: aliceblue;
     margin: 0;
@@ -71,12 +59,14 @@ p {
 
 p::before {
     font-size: 32px;
+    font-weight: 300;
 
     content: "Вопрос: "attr(data-q);
 }
 
 p::after {
     font-size: 24px;
+    font-weight: 500;
     content: "\A Ответ: "attr(data-a);
     white-space:pre-line;
 }
