@@ -21,13 +21,14 @@ xhr.onerror = function() {
   alert("Произошла ошибка… Прости!");
 };
 
+/** @param {string} questions Текст с вопросами */
 function CreateQuestions(questions)
 {
     let questionsSplited = questions.split("В:");
     questionsSplited.forEach(qna => {
         if(qna == undefined || qna == "") return;
         let qnaSplited = qna.split("О:");
-        CreateQuestion(qnaSplited[0], qnaSplited[1]);
+        CreateQuestion(qnaSplited[0].trim(), qnaSplited[1].trim());
     });
 }
 
