@@ -85,6 +85,7 @@ nav a:hover::after
 .Question h2
 {
     font-weight: 500;
+    white-space: pre-line;
 }
 
 .Question h1::after
