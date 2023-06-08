@@ -1,35 +1,38 @@
-const File = "https://raw.githubusercontent.com/MrLimeick/QnA/main/Informatics.txt";
-let xhr = new XMLHttpRequest();
+let params = new URLSearchParams(window.location.search);
+let lesson = params.get("lesson");
 
-xhr.open('GET', File);
-
-xhr.send();
-
-xhr.onload = function() 
+if(lesson != undefined)
 {
-  if (xhr.status != 200) 
-  { 
-    alert('Произошла ошибка: ' + xhr.status + "\n Прости…");
-    return;
-  }
+    const File = lesson + ".txt";
 
-  CreateQuestions(xhr.responseText);
-  delete(File);
-};
+    fetch(File)
+    .then((Response) =>
+    {
+        if(!Response.ok)
+        {
+            throw new console.error("Ошибка! " + Response.statusText);
+        }
 
-xhr.onerror = function() {
-  alert("Произошла ошибка… Прости!");
-};
+        return Response.text();
+    })
+    .then((text) => 
+        CreateQuestions(text)
+    )
+}
+else
+{
+    console.log("Choose lesson!");
+}
 
 /** @param {string} questions Текст с вопросами */
 function CreateQuestions(questions)
 {
-    let questionsSplited = questions.split("В:");
-    questionsSplited.forEach(qna => {
+    let questionsSplitted = questions.split("В:");
+    questionsSplitted.forEach(qna => {
         if(qna == undefined || qna == "") return;
-        let qnaSplited = qna.split("О:");
-        CreateQuestion(qnaSplited[0].trim(), qnaSplited[1].trim());
-    });
+        let qnaSplitted = qna.split("О:");
+        CreateQuestion(qnaSplitted[0].trim(), qnaSplitted[1].trim());
+    })
 }
 
 function CreateQuestion(q, a) 

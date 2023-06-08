@@ -8,13 +8,11 @@ body {
     border-radius: 20px;
 }
 
-*
-{
+* {
     margin: 0;
 }
 
-nav
-{
+nav {
     position: sticky;
     top: 20px;
     display: flex;
@@ -28,19 +26,15 @@ nav
 
     background-color: lightblue;
     color: white;
-
-    margin-bottom: 10px;
 }
 
-nav a
-{
+a {
     font-size: 24px;
     text-decoration: none;
     color: inherit;
 }
 
-nav a::after
-{
+a::after {
     position:relative;
     display: block;
     content: "";
@@ -53,19 +47,16 @@ nav a::after
     background-color: #fff;
     transition: 0.2s;
 }
-
-nav a:hover::after
-{
+a:hover::after {
     width: 100%;
     left: 0%;
     opacity: 1;
 }
 
-
-.Question
-{
+.Question {
     margin: 10px 0px;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     width: 100%;
 
@@ -75,21 +66,22 @@ nav a:hover::after
     text-overflow: inherit;
     height: fit-content;
     border-radius: inherit;
+
+    box-shadow: 0px 2px 5px rgb(180, 180, 180);
 }
 
-.Question h1
-{
-    margin-bottom: 20px;
+.Question h1 {
+    /* margin-bottom: 20px; */
     font-weight: 300;
+
+    /* text-shadow: 0px 2px 5px rgb(134, 181, 178) ; */
 }
-.Question h2
-{
+.Question h2 {
     font-weight: 500;
     white-space: pre-line;
 }
 
-.Question h1::after
-{
+.Question h1::after {
     display: block;
     content: "";
     width: 100%;
@@ -98,8 +90,7 @@ nav a:hover::after
     margin: 20px 0px;
 }
 
-.footer
-{
+.footer {
     display: flex;
     padding: 20px;
 
@@ -112,12 +103,9 @@ nav a:hover::after
     margin-top: 10px;
 }
 
-.footer img
-{
+img {
     transition: 0.2s;
 }
-
-.footer img:hover
-{
+img:hover {
     filter: opacity(0.5);
 }

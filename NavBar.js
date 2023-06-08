@@ -1,7 +1,22 @@
-let ToI = document.getElementById("ToI");
-ToI.onclick = function()
+class Lesson
 {
-    alert("Да, пока-что только информатика… Пока-что!");
+    constructor(name, file)
+    {
+        this.name = name;
+        this.file = file;
+    }
+}
+
+let lessons = 
+[
+    new Lesson("История", "History.txt"), 
+    new Lesson("Информатика", "Informatics.txt")
+];
+
+let ToM = document.getElementById("ToM");
+ToM.onclick = function() 
+{
+    alert("Появиться позже!");
 }
 
 let nav = document.getElementById("nav-bar");
