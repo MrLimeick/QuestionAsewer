@@ -7,8 +7,7 @@ if(lesson != undefined)
 {
     const File = lesson + ".txt";
 
-    fetch(File)
-    .then((Response) =>
+    fetch(File).then((Response) =>
     {
         if(!Response.ok)
         {
@@ -39,6 +38,7 @@ function CreateQuestions(questions)
 
 function CreateQuestion(q, a) 
 {
+
     let newDiv = document.createElement("div");
     newDiv.className = "Question"
     newDiv.innerHTML = "<h1>" + q + "</h1><h2>" + a + "</h2>";
