@@ -5,7 +5,7 @@ if(lesson == undefined) lesson = "Informatics";
 
 if(lesson != undefined)
 {
-    const File = lesson + ".txt";
+    const File = "./Lessons/" + lesson + ".txt";
 
     fetch(File).then((Response) =>
     {
