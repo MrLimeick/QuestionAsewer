@@ -74,12 +74,10 @@ a:hover::after {
 .Question h1 {
     /* margin-bottom: 20px; */
     font-weight: 300;
-
-    /* text-shadow: 0px 2px 5px rgb(134, 181, 178) ; */
 }
 .Question h2 {
     font-weight: 500;
-    white-space: pre-line;
+    white-space: pre;
 }
 
 .Question h1::after {
