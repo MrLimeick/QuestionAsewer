@@ -77,7 +77,7 @@ a:hover::after {
 }
 .Question h2 {
     font-weight: 500;
-    white-space: pre;
+    white-space: pre-wrap;
 }
 
 .Question h1::after {
