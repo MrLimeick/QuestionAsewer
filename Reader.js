@@ -1,7 +1,7 @@
 let params = new URLSearchParams(window.location.search);
 let lesson = params.get("lesson");
 
-if(lesson == undefined) lesson = "Informatics";
+if(lesson == undefined) lesson = "Programming";
 
 if(lesson != undefined)
 {
